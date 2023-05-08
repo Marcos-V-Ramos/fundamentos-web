@@ -15,8 +15,10 @@
             <span>Portifólio</span>
         </div>
         <ul>
-            <li>Home</li>
-            <a href="contato.html">
+            <a href="./index.html">
+                <li>Home</li>
+            </a>
+            <a href="#contato">
                 <li>Contato</li>
             </a>
         </ul>
@@ -25,8 +27,8 @@
     <!-- Conteúdo da Página -->
     <main>
         <section>
-            <form action="">
-                <h2>Contato</h2>
+            <form>
+                <h2 id="contato">Contato</h2>
                 <div>
                     <label for="nome">Nome:</label>
                     <input id="nome" type="text" placeholder="Insira o seu nome completo:">
@@ -38,12 +40,12 @@
                     <div id="txtEmail"></div>
                 </div>
                 <div>
-                    <label for="mensagem">E-mail:</label>
+                    <label for="mensagem">Texto:</label>
                     <textarea id="mensagem" type="text" rows="8" placeholder="Insira a sua mensagem:">
                     </textarea>
                     <div id="txtMensagem"></div>
-                    <button type="button">Enviar</button>
                 </div>
+                <button type="button">Enviar</button>
             </form>
         </section>
 
