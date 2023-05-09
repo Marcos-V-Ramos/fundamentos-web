@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/images/goku_ico.png">
+    <link rel="stylesheet" href="./assets/css/style.css"> 
     <title>Marcos Vinicius - Portifólio</title>
 </head>
 <body>
@@ -25,21 +26,24 @@
     </nav>
 
     <!-- Conteúdo da Página -->
-    <main>
-        <section>
+    <main class="contato">
+        <section class="formulario">
             <form>
                 <h2 id="contato">Contato</h2>
-                <div>
+                
+                <div class="campos-form">
                     <label for="nome">Nome:</label>
                     <input id="nome" type="text" placeholder="Insira o seu nome completo:">
                     <div id="txtNome"></div>
                 </div>
-                <div>
+                
+                <div class="campos-form">
                     <label for="email">E-mail:</label>
                     <input id="email" type="email" placeholder="Insira o seu nome completo:">
                     <div id="txtEmail"></div>
                 </div>
-                <div>
+
+                <div class="campos-form">
                     <label for="mensagem">Texto:</label>
                     <textarea id="mensagem" type="text" rows="8" placeholder="Insira a sua mensagem:">
                     </textarea>
