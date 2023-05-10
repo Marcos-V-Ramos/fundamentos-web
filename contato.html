@@ -11,65 +11,88 @@
 <body>
     <!-- Menu da Página -->
     <nav>
-        <div>
-            <img src="/assets/images/goku_ico.png" alt="Logo da página">
-            <span>Portifólio</span>
+        <div class="logo">
+            <img class="icone" src="./assets/images/goku_ico.png" alt="Logo">
+            <span class="titulo">Portfólio</span>
         </div>
+
         <ul>
-            <a href="./index.html">
-                <li>Home</li>
-            </a>
-            <a href="#contato">
-                <li>Contato</li>
-            </a>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
 
     <!-- Conteúdo da Página -->
     <main class="contato">
         <section class="formulario">
-            <form>
-                <h2 id="contato">Contato</h2>
-                
-                <div class="campos-form">
-                    <label for="nome">Nome:</label>
-                    <input id="nome" type="text" placeholder="Insira o seu nome completo:">
-                    <div id="txtNome"></div>
-                </div>
-                
-                <div class="campos-form">
-                    <label for="email">E-mail:</label>
-                    <input id="email" type="email" placeholder="Insira o seu nome completo:">
-                    <div id="txtEmail"></div>
-                </div>
+            <h3>Contato</h2>
+                <form>
+                    <div class="campos-form">
+                        <label for="nome">Nome:</label>
+                        <input onkeyup="validarNome()" id="nome" name="nome" type="text"
+                            placeholder="Insira o seu nome completo">
+                        <div id="txtNome"></div>
+                    </div>
 
-                <div class="campos-form">
-                    <label for="mensagem">Texto:</label>
-                    <textarea id="mensagem" type="text" rows="8" placeholder="Insira a sua mensagem:">
-                    </textarea>
-                    <div id="txtMensagem"></div>
-                </div>
-                <button type="button">Enviar</button>
-            </form>
+                    <div class="campos-form">
+                        <label for="email">E-mail:</label>
+                        <input onkeyup="validarEmail2()" id="email" name="email" type="text"
+                            placeholder="Insira o seu e-mail">
+                        <div id="txtEmail"></div>
+                    </div>
+
+                    <div class="campos-form">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea onkeyup="validarMensagem()" id="mensagem" name="mensagem" rows="8"
+                            placeholder="Deixe sua mensagem..."></textarea>
+                        <div id="txtMensagem"></div>
+                    </div>
+
+                    <button type="button" onclick="enviarForm()">
+                        Enviar
+                    </button>
+
+
+                </form>
         </section>
 
-
+        <section>
+            <h3>Consultar CEP</h3>
+            <div class="endereco">
+                <div class="campos-form">
+                    <label for="cep">CEP:</label>
+                    <input id="cep" name="cep" type="text"
+                        placeholder="Digite o número do CEP">
+                    <div id="txtCep"></div>
+                </div>
+                <button type="button" onclick="consultarCep()">
+                    Consultar
+                </button>
+                <hr>
+                <div class="campos-form">
+                    <label for="dados">Endereço:</label>
+                    <textarea id="dados" name="dados" rows="7"
+                        placeholder="Busca CEP..."></textarea>
+                    <div id="txtCep"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Rodapé da Página -->
     <footer>
-        <div>
-            <a href="https://www.linkedin.com/in/marcos-v-ramos-caldas/" target="_blank">
-                <img src="assets/images/linkedin.png" alt="Logo do LinkedIn" title="LinkedIn">
+        <div class="redes_sociais">
+            <a href="http://linkedin.com" target="_blank">
+                <img class="icons" src="./assets/images/linkedin.png" alt="Linkedin">
             </a>
-            <a href="https://www.instagram.com/" target="_blank">
-                <img src="assets/images/instagram.png" alt="Logo do Instagram" title="Instagram">
+            <a href="http://github.com" target="_blank">
+                <img class="icons" src="./assets/images/github.png" alt="Github">
             </a>
-            <a href="https://github.com/Marcos-V-Ramos" target="_blank">
-                <img src="assets/images/github.png" alt="Logo do GitHub" title="GitHub">
+            <a href="http://instagram.com" target="_blank">
+                <img class="icons" src="./assets/images/instagram.png" alt="Instagram">
             </a>
         </div>
-        <p>Desenvolvido por Marcos Vinicius Ramos &copy;</p>
+        <p class="by">Desenvolvido por Marcos Vinicius Ramos &copy;</p>
     </footer>
 </body>
 </html>
